@@ -21,7 +21,8 @@ $primary-color: #26127e;
 $secondary-color: #4d25e0;
 
 $gradient-color: linear-gradient(45deg, #26127e, #4d25e0);
-$light-color: #f5f4fa;
+$gradient1-color: linear-gradient(45deg, #4d25e0, #26127e);
+$light-color: #f6f6f6;
 
 $white-color: #fff;
 
@@ -122,6 +123,106 @@ $white-color: #fff;
       color: $white-color;
 
       letter-spacing: 2px;
+    }
+    .checkoutcart {
+      font-family: "Poppins", sans-serif;
+      background: $secondary-color;
+      border: none;
+      color: $white-color;
+      padding: 10px 25px;
+      box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, 1);
+      cursor: pointer;
+
+      border-radius: 5px;
+      transition: background 0.5s linear;
+      text-decoration: none;
+
+      font-size: 1.2rem;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        background: $primary-color;
+        transition: background 0.5s linear;
+      }
+    }
+  }
+}
+
+// home page products
+.home__container {
+  max-width: 1200px;
+  margin: 4rem auto;
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    margin-bottom: 3rem;
+  }
+  .cart__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
+  .cart {
+    box-shadow: 0px 10px 40px -35px rgba(0, 0, 0, 1);
+    border-radius: 1rem;
+    overflow: hidden;
+
+    box-sizing: border-box;
+    .cart__body {
+      background: $light-color;
+      .cart__img {
+        width: 100%;
+      }
+      .cart__content {
+        padding: 0rem 2rem 2rem 2rem;
+        .cart__brand {
+          background: rgba(0, 0, 0, 0.1);
+          display: inline-block;
+          padding: 0.4rem 1.2rem;
+          font-size: 1.1rem;
+          border-radius: 0.5rem;
+          margin: 0rem;
+          margin-bottom: 0.2rem;
+        }
+        .cart__title {
+          color: $secondary-color;
+          font-size: 1.6rem;
+          margin-bottom: 0.4rem;
+          text-transform: capitalize;
+        }
+        .cart__prices {
+          display: flex;
+          align-items: center;
+          h2 {
+            color: $primary-color;
+            font-size: 2.5rem;
+            font-weight: 600;
+            padding: 0rem 1rem 0rem 0rem;
+            margin: 0rem;
+
+            letter-spacing: 1px;
+          }
+          h3 {
+            color: rgb(165, 165, 165);
+            padding: 0rem 1rem 0rem 0rem;
+            margin: 0rem;
+            font-size: 2rem;
+
+            font-weight: 300;
+
+            text-decoration: line-through;
+            letter-spacing: 1px;
+          }
+          p.discound__price {
+            color: $primary-color;
+            font-weight: 600;
+          }
+        }
+      }
     }
   }
 }

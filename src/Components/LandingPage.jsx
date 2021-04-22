@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function LandingPage() {
     return (
@@ -8,6 +9,8 @@ function LandingPage() {
                <p>Welcome</p>
                <h2>MyShop</h2>
                <h3>One place for all your <span>fashion</span> trends</h3>
+               <br/><br/>
+               <Link className="checkoutcart" to="/cart">Check Out Cart</Link>
             </div>
         </div>
     )
