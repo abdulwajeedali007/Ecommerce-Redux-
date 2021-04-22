@@ -15,9 +15,11 @@ function Home() {
                {products.map(product => (
                 <div className="cart">
                 <div className="cart__body">
-                <Link to={`/details/${product.id}`}>
-                  <img src={`images/${product.image}`} alt={product.name} class="cart__img"/>
-                </Link>
+                <div className="img__box"> 
+                    <Link to={`/details/${product.id}`} >
+                        <img src={`images/${product.image}`} alt={product.name} class="cart__img"/>
+                    </Link>
+                </div>
                 <div className="cart__content">
                     <p class="cart__brand">{product.brand}</p>
                     <p className="cart__title">{product.name} </p>

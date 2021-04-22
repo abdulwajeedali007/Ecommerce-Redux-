@@ -153,7 +153,9 @@ $white-color: #fff;
 .home__container {
   max-width: 1200px;
   margin: 4rem auto;
-
+  .img__box {
+    overflow: hidden;
+  }
   h2 {
     font-size: 4rem;
     font-weight: 800;
@@ -172,10 +174,20 @@ $white-color: #fff;
     overflow: hidden;
 
     box-sizing: border-box;
+
+    transition: all 0.5s linear;
+
+    &:hover {
+      .cart__img {
+        transform: scale(1.1);
+        transition: all 0.5s linear;
+      }
+    }
     .cart__body {
       background: $light-color;
       .cart__img {
         width: 100%;
+        transition: all 0.5s linear;
       }
       .cart__content {
         padding: 0rem 2rem 2rem 2rem;
@@ -223,6 +235,95 @@ $white-color: #fff;
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar_container {
+    width: 100%;
+    .navbar {
+      max-width: 900px;
+      padding: 10px 25px;
+    }
+  }
+  .landing {
+    .content_area {
+      left: 35%;
+    }
+  }
+  .home__container {
+    max-width: 1200px;
+    padding: 1rem;
+    h2 {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar_container {
+    width: 100%;
+    .navbar {
+      max-width: 700px;
+      padding: 10px 25px;
+    }
+  }
+  .landing {
+    .content_area {
+      left: 35%;
+      h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+  .home__container {
+    max-width: 1200px;
+    padding: 2rem;
+    h2 {
+      font-size: 3.5rem;
+    }
+    .cart__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar_container {
+    width: 100%;
+    .navbar {
+      max-width: 100%;
+      padding: 10px 35px;
+    }
+  }
+  .landing {
+    .content_area {
+      left: 40%;
+      top: 45%;
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        display: none;
+      }
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+      .checkoutcart {
+        padding: 0.7rem 1rem;
+      }
+    }
+  }
+  .home__container {
+    max-width: 1200px;
+    padding: 2rem;
+    h2 {
+      font-size: 3rem;
+    }
+    .cart__container {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
