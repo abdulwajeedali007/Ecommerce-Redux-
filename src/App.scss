@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 65.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+// variables
+$primary-color: #26127e;
+$secondary-color: #4d25e0;
+
+$gradient-color: linear-gradient(45deg, #26127e, #4d25e0);
+$light-color: #f5f4fa;
+
+.App {
+  p {
+    font-size: 1.6rem;
+  }
+}
