@@ -305,6 +305,10 @@ $white-color: #fff;
 
           cursor: pointer;
         }
+        .details__title {
+          font-size: 2rem;
+          margin-top: 2rem;
+        }
         .description {
           font-size: 1.4rem;
           margin-top: 1rem;
@@ -364,6 +368,16 @@ $white-color: #fff;
       grid-template-columns: repeat(2, 1fr);
     }
   }
+  // details page
+  .product__container {
+    width: 100%;
+    .row {
+      padding: 1rem;
+    }
+    p.description {
+      padding: 0rem 2rem 0rem 0rem;
+    }
+  }
 }
 
 @media (max-width: 450px) {
@@ -401,6 +415,12 @@ $white-color: #fff;
     }
     .cart__container {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .product__container {
+    width: 100%;
+    .row {
+      grid-template-columns: 1fr;
     }
   }
 }

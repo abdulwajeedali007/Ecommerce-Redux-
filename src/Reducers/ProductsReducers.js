@@ -12,13 +12,13 @@ const initState = {
         {id: 10, name: 'male winter jacket', image: '10.jpg', price: 120, discount: 3, discountPrice: 120  - 3 / 100 * 120, quantity: 1, desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aspernatur, quo nostrum natus dolor obcaecati reprehenderit reiciendis, repellat omnis voluptates et, dolorem maxime iure sapiente laboriosam quia! Aliquam, vel soluta?", brand: 'RAYMOND'},        
 
     ],
-    proudct: {},
+    product: {},
 }
 
 const ProductsReducer = (state = initState, action) => {
    switch(action.type){
        case "PRODUCT":
-           return {...state, product: state.products.filter(product => product.id === parseInt(action.id))}
+           return {...state, product: state.products.find(product => product.id === parseInt(action.id))}
        default: 
        return state;
    }

@@ -24,8 +24,8 @@ function Home() {
                     <p className="cart__brand">{product.brand}</p>
                     <p className="cart__title">{product.name} </p>
                     <div className="cart__prices">
-                        <h2 className="main__price">{currencyFormatter.format(product.price,{code: 'USD'})}</h2> 
-                        <h3 className="actual__price">{currencyFormatter.format(product.discountPrice,{code: 'USD'})}</h3>
+                        <h2 className="main__price">{currencyFormatter.format(product.discountPrice,{code: 'USD'})}</h2> 
+                        <h3 className="actual__price">{currencyFormatter.format(product.price,{code: 'USD'})}</h3>
                         <p className="discound__price">({product.discount}%)</p>
                     </div>
                 </div>
