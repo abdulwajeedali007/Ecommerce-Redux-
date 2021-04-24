@@ -5,7 +5,7 @@ import currencyFormatter from'currency-formatter';
 import {Link} from 'react-router-dom'
 function Home() {
     const {products} = useSelector(state => state.products)
-    console.log(products);
+    
     return (
         <>
             <LandingPage/>
@@ -13,15 +13,15 @@ function Home() {
                <h2>MyShop! <br/> Products</h2>
                <div className="cart__container">
                {products.map(product => (
-                <div className="cart">
+                <div className="cart" key={product.id}>
                 <div className="cart__body">
                 <div className="img__box"> 
                     <Link to={`/details/${product.id}`} >
-                        <img src={`images/${product.image}`} alt={product.name} class="cart__img"/>
+                        <img src={`images/${product.image}`} alt={product.name} className="cart__img"/>
                     </Link>
                 </div>
                 <div className="cart__content">
-                    <p class="cart__brand">{product.brand}</p>
+                    <p className="cart__brand">{product.brand}</p>
                     <p className="cart__title">{product.name} </p>
                     <div className="cart__prices">
                         <h2 className="main__price">{currencyFormatter.format(product.price,{code: 'USD'})}</h2> 
