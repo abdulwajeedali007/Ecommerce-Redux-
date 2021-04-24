@@ -44,8 +44,8 @@ function Details() {
             <div className="content__area">
                 <p className="product__title">{product.name}</p>
                 <div className="prices__area">
-                   <h4>{currencyFormatter.format(product.discountPrice,{code: 'USD'})}</h4>
-                   <h3>{currencyFormatter.format(product.price,{code: 'USD'})}</h3> 
+                   <h4>{currencyFormatter.format(product.price,{code: 'USD'})}</h4>
+                   <h3>{currencyFormatter.format(product.discountPrice,{code: 'USD'})}</h3> 
                 </div>
                 <br/>
                 <div className="buttons">
@@ -53,7 +53,7 @@ function Details() {
                    <span className="quantity btn">{quantity}</span>
                    <span className="inc btn" onClick={() => setQuantity(quantity+1)}><AiOutlinePlus/></span>
 
-                   <button className="addtocart">ADD TO CART</button>
+                   <button className="addtocart" onClick={() => dispatch({type: 'ADD_TO_CART',product,quantity})}>ADD TO CART</button>
 
 
                    

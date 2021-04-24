@@ -1,8 +1,14 @@
 import React from 'react'
 import {FaOpencart} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
+import {useSelector} from 'react-redux'
 
 function Navbar() {
+    let count = 0
+     count = useSelector(state => state.cartReducer.productIncart.length)
+
+ 
+    
     return (
         <div className="navbar_container">
             <div className="navbar">
@@ -12,7 +18,7 @@ function Navbar() {
                 <div className="addtocart">
                  <Link to="/cart" className="cartIcon">
                     <FaOpencart/>
-                    <span className="count">02</span>
+                    <span className="count">{count}</span>
                  </Link>
                 </div>
             </div>

@@ -1,7 +1,8 @@
 import {combineReducers, createStore} from 'redux'
 import ProductReducers from './Reducers/ProductsReducers'
 import { devToolsEnhancer } from 'redux-devtools-extension';
-const root = combineReducers({products: ProductReducers })
+import cartReducer from './Reducers/CartReducer'
+const root = combineReducers({products: ProductReducers, cartReducer })
 
 const store = createStore(root, devToolsEnhancer())
 
