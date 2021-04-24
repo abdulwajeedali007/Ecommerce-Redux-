@@ -9,12 +9,13 @@ function Details() {
     
     
 
-       const product = useSelector(state => state.products.product[0]);
+       const {product} = useSelector(state => state.products);
 
         //    count state 
         const [quantity, setQuantity] = useState(1); 
         
         console.log(product);
+
         const decQuantity = () => {
            if(quantity > 1){
                 setQuantity(quantity - 1)
@@ -55,7 +56,8 @@ function Details() {
                    <button className="addtocart">ADD TO CART</button>
 
 
-                   <br/>
+                   
+                   <h3 className="details__title">Details</h3>
                    <p className="description">{product.desc}</p>
                 </div>
             </div>
