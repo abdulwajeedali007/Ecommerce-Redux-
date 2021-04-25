@@ -1,0 +1,187 @@
+@import "../App.scss";
+.empty__container {
+  text-align: center;
+  .cart__empty {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    color: $primary-color;
+    opacity: 0.2;
+  }
+  .backtohome {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $white-color;
+
+    background: $primary-color;
+    border: none;
+    padding: 0.9rem 3rem;
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+  }
+}
+.items__container {
+  max-width: 1200px;
+  margin: 0px auto;
+
+  margin-top: 2rem;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+
+    .row__main {
+      .col-9 {
+        .row {
+          width: 100%;
+          background-color: $secondary-color;
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+
+          padding: 1rem;
+
+          text-align: center;
+          .col-2 {
+            p {
+              font-size: 1.2rem;
+              font-weight: 500;
+              color: $white-color;
+            }
+          }
+        }
+      }
+      .col-9-2 {
+        .row {
+          width: 100%;
+          background-color: $light-color;
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          align-items: center;
+          justify-items: center;
+
+          padding: 1rem;
+          box-shadow: 0px 10px 10px -20px rgba(0, 0, 0, 1);
+
+          margin-bottom: 1rem;
+
+          box-sizing: border-box;
+
+          .col-2 {
+            p {
+              font-size: 1.2rem;
+              font-weight: 500;
+            }
+            .item__title {
+              text-transform: uppercase;
+            }
+            .item__quantity {
+              .btn {
+                padding: 1rem;
+                background: $secondary-color;
+                color: $white-color;
+                cursor: pointer;
+              }
+            }
+            .image__box {
+              width: 6rem;
+              img {
+                width: 100%;
+              }
+            }
+            .item__remove {
+              font-size: 1.6rem;
+              font-weight: 600;
+              color: $primary-color;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .row__main2 {
+      .col-3 {
+        .row {
+          width: 100%;
+          background-color: $secondary-color;
+          display: grid;
+          grid-template-columns: 1fr;
+
+          padding: 1rem 0rem;
+
+          .col-2 {
+            p {
+              font-size: 1.2rem;
+              font-weight: 500;
+              color: $white-color;
+              text-align: left;
+            }
+          }
+        }
+      }
+      .col-3-1 {
+        .row {
+          width: 100%;
+          background: $gradient-color;
+          padding: 1rem 0rem;
+          .col-2 {
+            padding: 1rem 0rem 1rem 1rem;
+            .total__quantity {
+              font-size: 1.6rem;
+              font-weight: 600;
+              color: $white-color;
+            }
+            .total__price {
+              font-size: 1.4rem;
+              font-weight: 500;
+              color: $white-color;
+
+              margin-top: 2rem;
+            }
+            .checkOUT {
+              background: $white-color;
+              color: $primary-color;
+              padding: 1rem 3.5rem;
+              display: block;
+              border: none;
+              width: 95%;
+              margin-top: 2rem;
+
+              font-family: "Poppins", sans-serif;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    width: 100%;
+
+    padding: 0rem 2rem;
+
+    box-sizing: border-box;
+  }
+  .row__main {
+    .col-9 {
+      display: none;
+    }
+    .col-9-2 {
+      .row {
+        padding: 0rem;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-row-gap: 2rem;
+      }
+    }
+  }
+}
