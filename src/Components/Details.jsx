@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
 import currencyFormatter from'currency-formatter';
 import {AiOutlineMinus, AiOutlinePlus} from 'react-icons/ai' 
 function Details() {
@@ -14,7 +14,7 @@ function Details() {
         //    count state 
         const [quantity, setQuantity] = useState(1); 
         
-        console.log(product);
+      //   console.log(product);
 
         const decQuantity = () => {
            if(quantity > 1){
@@ -53,12 +53,14 @@ function Details() {
                    <span className="quantity btn">{quantity}</span>
                    <span className="inc btn" onClick={() => setQuantity(quantity+1)}><AiOutlinePlus/></span>
 
-                   <button className="addtocart" onClick={() => dispatch({type: 'ADD_TO_CART',product,quantity})}>ADD TO CART</button>
+                   <button className="addtocart" onClick={() => dispatch({type: 'ADD_TO_CART',product,quant: quantity})}>ADD TO CART</button>
 
 
                    
                    <h3 className="details__title">Details</h3>
                    <p className="description">{product.desc}</p>
+
+                    <Link to="/cart"><button className="checkoutBtn">Go to cart</button></Link>
                 </div>
             </div>
             </div>
